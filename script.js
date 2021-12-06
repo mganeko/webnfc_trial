@@ -51,7 +51,7 @@ readButton.addEventListener("click", async () => {
       if (recordType === "text") {
         const textDecoder = new TextDecoder(encoding);
         const text = textDecoder.decode(data);
-        readLog.textContent = text;
+        readText.textContent = text;
       }
     });
   } catch (error) {
