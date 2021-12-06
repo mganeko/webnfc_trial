@@ -40,8 +40,8 @@ readButton.addEventListener("click", async () => {
     reader.addEventListener("reading", ({ message, serialNumber }) => {
       console.log(`> Serial Number: ${serialNumber}`);
       console.log(message);
-      //const messageString = JSON.stringify(message);
-      const messageString = "message records=" + message.records.length;
+      const messageString = JSON.stringify(message);
+      //const messageString = "message records=" + message.records.length;
       readLog.textContent = messageString;
       const serialString = `Serial Number: ${serialNumber}`
       readSerial.textContent = serialString;
