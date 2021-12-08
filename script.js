@@ -69,8 +69,8 @@ function decodeRecord(record) {
   switch (recordType) {
     case "text":
       const textDecoder = new TextDecoder(encoding);
-      const text = "text: " + textDecoder.decode(data);
-      return text;
+      const text = textDecoder.decode(data);
+      return "Text:" + text;
 
     case "url":
       const decoder = new TextDecoder();
