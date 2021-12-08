@@ -47,7 +47,7 @@ readButton.addEventListener("click", async () => {
       const serialString = `Serial Number: ${serialNumber}`
       readSerial.textContent = serialString;
 
-      let str;
+      let str = "";
       for (const record of message.records) {
         str += (decodeRecord(record) + "<br />\n");
       }
@@ -60,11 +60,11 @@ readButton.addEventListener("click", async () => {
 
 function decodeRecord(record) {
   const { data, encoding, recordType } = record;
-  if (recordType === "text") {
-    const textDecoder = new TextDecoder(encoding);
-    const text = textDecoder.decode(data);
-    return text;
-  }
+  // if (recordType === "text") {
+  //   const textDecoder = new TextDecoder(encoding);
+  //   const text = textDecoder.decode(data);
+  //   return text;
+  // }
 
   switch (recordType) {
     case "text":
